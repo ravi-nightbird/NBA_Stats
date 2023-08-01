@@ -6,6 +6,7 @@ import json
 import os
 
 input_variable = os.environ['INPUT_STORE']
+print(input_variabele)
 
 url =('https://nba-stats-db.herokuapp.com/api/playerdata/name/'+input_variable)
 
@@ -29,6 +30,7 @@ try:
                 )  
         data_frame=pd.DataFrame(dat)
         title='Players Points in Each Season' 
+        print(input_variabele)
         plot=px.bar(data_frame,x='Season',y='Points',color='PlayerName',title=title)
         plot.show()
     else:
