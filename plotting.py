@@ -30,9 +30,9 @@ try:
                 )  
         data_frame=pd.DataFrame(dat)
         title='Players Points in Each Season' 
-        print(input_variable)
         plot=px.bar(data_frame,x='Season',y='Points',color='PlayerName',title=title)
         plot.show()
+        print(input_variable)
     else:
         print(f"Error: {response.status_code}")
 
