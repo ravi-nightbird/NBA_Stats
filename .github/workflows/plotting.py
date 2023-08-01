@@ -3,9 +3,12 @@ import plotly.express as px
 import requests as rq
 
 import json
+import os
 
-name=input('Enter the name of the player for which you want the stats: ')
-url =('https://nba-stats-db.herokuapp.com/api/playerdata/name/'+name)
+input_variable = os.environ['INPUT_STORE']
+
+
+url =('https://nba-stats-db.herokuapp.com/api/playerdata/name/'+input_variable)
 
 
 
