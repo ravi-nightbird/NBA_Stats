@@ -8,12 +8,12 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
- workflow_dispatch:
-     inputs:
-       myInput:
-         description: 'User Input:'
-         required: true
-         default: "Hello World"
+  workflow_dispatch:
+      inputs:
+        myInput:
+          description: 'User Input:'
+          required: true
+          default: "Hello World"
 
 permissions:
   contents: read
@@ -38,7 +38,7 @@ jobs:
         run: python3 -m pip install --upgrade pip requests
       - name: Execute Test Script
         run: |
-        echo "Store: ${{ github.event.inputs.myInput }}"
-        INPUT_STORE=${{ github.event.inputs.myInput }} python3 plotting.py
+          echo "Store: ${{ github.event.inputs.myInput }}"
+          INPUT_STORE=${{ github.event.inputs.myInput }} python3 plotting.py
           
 
