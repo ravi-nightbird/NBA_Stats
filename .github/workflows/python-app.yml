@@ -33,7 +33,7 @@ jobs:
       - name: Install Python dependencies
         run: python -m pip install --upgrade pip pandas
       - name: Install Python dependencies
-        run: python3 -m pip install --upgrade pip plotly
+        run: python3 -m pip install --upgrade pip plotly-express
       - name: Install Python dependencies
         run: python3 -m pip install --upgrade pip requests
       - name: Execute Test Script
